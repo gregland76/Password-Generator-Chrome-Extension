@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <main class="popup">
+      <header class="hero">
+        <div class="brand-row">
+          <div class="brand-mark" aria-hidden="true">
+            <span class="brand-mark-core"></span>
+          </div>
+          <p class="eyebrow">Chrome + Edge</p>
+        </div>
+        <h1>Générateur de mot de passe</h1>
+        <p class="subtitle">Ajustez les options, le mot de passe se régénère immédiatement.</p>
+      </header>
+
+      <section class="panel" aria-labelledby="generated-password-title">
+        <div class="panel-header">
+          <h2 id="generated-password-title">Mot de passe</h2>
+          <button id="copy-button" class="ghost-button" type="button">Copier</button>
+        </div>
+
+        <output id="password-output" class="password-output" aria-live="polite"></output>
+        <section class="strength-panel" aria-labelledby="strength-title">
+          <div class="strength-header">
+            <h3 id="strength-title">Robustesse</h3>
+            <span id="strength-label" class="strength-label">-</span>
+          </div>
+          <div class="strength-meter" aria-hidden="true">
+            <span id="strength-fill" class="strength-fill"></span>
+          </div>
+          <p id="strength-hint" class="strength-hint">Choisissez des options variées pour renforcer le mot de passe.</p>
+        </section>
+        <p id="status-message" class="status-message" aria-live="polite"></p>
+      </section>
+
+      <section class="panel controls" aria-labelledby="settings-title">
+        <div class="panel-header">
+          <h2 id="settings-title">Paramètres</h2>
+          <button id="generate-button" class="primary-button" type="button">Regénérer</button>
+        </div>
+
+        <label class="length-control" for="length-range">
+          <span>Nombre de caractères</span>
+          <div class="length-inputs">
+            <input id="length-range" type="range" min="6" max="64" value="16">
+            <input id="length-number" type="number" min="6" max="64" value="16">
+          </div>
+        </label>
+
+        <div class="checkbox-grid">
+          <label class="checkbox-card" for="include-lowercase">
+            <input id="include-lowercase" type="checkbox" checked>
+            <span>Lettres minuscules</span>
+          </label>
+
+          <label class="checkbox-card" for="include-uppercase">
+            <input id="include-uppercase" type="checkbox" checked>
+            <span>Lettres majuscules</span>
+          </label>
+
+          <label class="checkbox-card" for="include-digits">
+            <input id="include-digits" type="checkbox" checked>
+            <span>Chiffres</span>
+          </label>
+
+          <label class="checkbox-card" for="include-symbols">
+            <input id="include-symbols" type="checkbox" checked>
+            <span>Caractères spéciaux</span>
+          </label>
+
+          <label class="checkbox-card" for="exclude-ambiguous">
+            <input id="exclude-ambiguous" type="checkbox">
+            <span>Exclure les caractères ambigus (0, O, l, I, 1)</span>
+          </label>
+        </div>
+      </section>
+
+      <footer class="footer-credit">
+        <p>Développé par Grégory HARGOUS</p>
+        <a href="https://gregland.net" target="_blank" rel="noreferrer noopener">gregland.net</a>
+      </footer>
+    </main>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Password Generator">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f766e" />
+      <stop offset="55%" stop-color="#0d9488" />
+      <stop offset="100%" stop-color="#f59e0b" />
+    </linearGradient>
+    <linearGradient id="shine" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fff7ed" stop-opacity="1" />
+      <stop offset="100%" stop-color="#ffedd5" stop-opacity="0.65" />
+    </linearGradient>
+  </defs>
+  <rect x="10" y="10" width="108" height="108" rx="30" fill="url(#bg)" />
+  <circle cx="95" cy="33" r="11" fill="#fff7ed" fill-opacity="0.22" />
+  <path d="M43 54c0-12.15 9.85-22 22-22s22 9.85 22 22v8h4c5.52 0 10 4.48 10 10v20c0 5.52-4.48 10-10 10H37c-5.52 0-10-4.48-10-10V72c0-5.52 4.48-10 10-10h6v-8Zm14 0v8h16v-8c0-4.42-3.58-8-8-8s-8 3.58-8 8Z" fill="url(#shine)" />
+  <rect x="59" y="74" width="12" height="22" rx="6" fill="#0f3d3a" />
+  <circle cx="65" cy="77" r="9" fill="#134e4a" />
+</svg>
